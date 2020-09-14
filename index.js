@@ -158,4 +158,4 @@ function play(guild, song) {
   serverQueue.textChannel.send(`Zene lejátszása: **${song.title}**`);
 }
 
-client.login(token);
+client.login(process.env.token);

@@ -12,7 +12,7 @@ const queue = new Map();
 client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setStatus('online');
-  client.user.setActivity('u?help', {
+  client.user.setActivity('24/7 UPTIME!', {
     type: 'WATCHING'
   });
 });

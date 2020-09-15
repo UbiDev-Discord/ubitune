@@ -4,6 +4,8 @@ const {
   token
 } = require("./config.json");
 const ytdl = require("ytdl-core");
+const opusscript = require("opusscript")
+const fs = require('fs');
 
 const client = new Discord.Client();
 

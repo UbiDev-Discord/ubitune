@@ -50,7 +50,7 @@ client.on("message", async message => {
         description: "",
         fields: [{
             name: "PARANCSOK:",
-            value: "u?play [YouTube URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése"
+            value: "u?info - fontos információk a botról\nu?play [YouTube URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése"
           },
           {
             name: "SUPPORT SZERVER:",
@@ -82,19 +82,19 @@ client.on("message", async message => {
             value: "UbiDev"
           },
           {
-            name: "GitHub",
+            name: "GitHub:",
             value: "https://github.com/UbiDev-Discord/ubitune"
           },
           {
-            name: "contributors",
+            name: "contributors:",
             value: "Jelenleg senki nem segített se ötletekkel, se kódokkal a bot fejlesztésén."
           },
           {
-            name: "programnyelv",
+            name: "programnyelv:",
             value: "JavaScript, Node.js"
           },
           {
-            name: "futtatva",
+            name: "futtatva:",
             value: "Heroku"
           }
         ]

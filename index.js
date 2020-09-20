@@ -45,16 +45,12 @@ client.on("message", async message => {
   } else if (message.content === 'u?help') {
     message.channel.send({
       embed: {
-        author: {
-          name: client.user.username,
-          icon_url: client.user.avatarURL
-        },
         color: 0x42F572,
         title: "A prefixem: u?",
         description: "",
         fields: [{
             name: "PARANCSOK:",
-            value: "u?play [YouTUbe URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése"
+            value: "u?play [YouTube URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése"
           },
           {
             name: "SUPPORT SZERVER:",
@@ -63,6 +59,43 @@ client.on("message", async message => {
           {
             name: "BOT MEGHÍVÁSA:",
             value: "https://bit.ly/2YHJDgP"
+          }
+        ]
+      }
+    });
+  } else if (message.content === 'u?info') {
+    message.channel.send({
+      embed: {
+        color: 0x42F572,
+        title: "BOT INFORMÁCIÓK:",
+        description: "",
+        fields: [{
+            name: "prefix:",
+            value: "u? (nem változtatható)"
+          },
+          {
+            name: "fő fejlesztő:",
+            value: "UbiOne#7240"
+          },
+          {
+            name: "fejlesztő csapat:",
+            value: "UbiDev"
+          },
+          {
+            name: "GitHub",
+            value: "https://github.com/UbiDev-Discord/ubitune"
+          },
+          {
+            name: "contributors",
+            value: "Jelenleg senki nem segített se ötletekkel, se kódokkal a bot fejlesztésén."
+          },
+          {
+            name: "programnyelv",
+            value: "JavaScript, Node.js"
+          },
+          {
+            name: "futtatva",
+            value: "Heroku"
           }
         ]
       }

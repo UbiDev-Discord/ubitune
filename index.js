@@ -50,7 +50,7 @@ client.on("message", async message => {
         description: "",
         fields: [{
             name: "PARANCSOK:",
-            value: "u?info - fontos információk a botról\nu?play [YouTube URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése"
+            value: "u?play [YouTube URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése\nu?info - érdekes információk a botról"
           },
           {
             name: "SUPPORT SZERVER:",

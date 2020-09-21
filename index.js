@@ -12,17 +12,17 @@ const client = new Discord.Client();
 const queue = new Map();
 
 const activities_list = [
-  "https://bit.ly/2YHJDgP", 
+  "https://bit.ly/2YHJDgP",
   "24/7 uptime",
   "u?help",
   "u?invite"
-  ];
+];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   setInterval(() => {
-      const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-      client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+    client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
   }, 5000);
 });
 
@@ -107,7 +107,7 @@ client.on("message", async message => {
         ]
       }
     });
-  } else if (message.content=== 'u?invite') {
+  } else if (message.content === 'u?invite') {
     message.channel.send({
       embed: {
         color: 0x42F572,
@@ -115,7 +115,7 @@ client.on("message", async message => {
         description: "https://bit.ly/2YHJDgP"
       }
     })
-  } else if (messasge.content === 'u?news') {
+  } else if (message.content === 'u?news') {
     message.channel.send({
       embed: {
         color: 0x42F572,
@@ -127,6 +127,8 @@ client.on("message", async message => {
     message.channel.send("Ez nem egy létező parancs!");
   }
 });
+
+//- Mostantól sokkal több információ tekinthető meg a változó állapoton\n- Bekerült az **u?news** parancs, ahol megtekinthetőek az újdonságok\n- Bekerült a **u?invite** parancs, ahol lekérhető a bot meghívója\n- Bekerült az **u?info** parancs, ahol érdekes információkat nézhetsz meg a botról
 
 async function execute(message, serverQueue) {
   const args = message.content.split(" ");

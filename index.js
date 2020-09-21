@@ -107,6 +107,14 @@ client.on("message", async message => {
         ]
       }
     });
+  } else if (message.content=== 'u?invite') {
+    message.channel.send({
+      embed: {
+        color: 0x42F572,
+        title: "MEGHÍVÓ LINKEM:",
+        description: `${invite}`
+      }
+    })
   } else {
     message.channel.send("Ez nem egy létező parancs!");
   }

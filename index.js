@@ -112,7 +112,7 @@ client.on("message", async message => {
       embed: {
         color: 0x42F572,
         title: "MEGHÍVÓ LINKEM:",
-        description: `${invite}`
+        description: "https://bit.ly/2YHJDgP"
       }
     })
   } else {

@@ -11,12 +11,19 @@ const client = new Discord.Client();
 
 const queue = new Map();
 
-client.once('ready', () => {
+const activities_list = [
+  "https://bit.ly/2YHJDgP", 
+  "24/7 uptime",
+  "u?info", 
+  "u?help"
+  ];
+
+client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setStatus('online');
-  client.user.setActivity('u?help', {
-    type: 'LISTENING'
-  });
+  setInterval(() => {
+      const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+      client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+  }, 5000);
 });
 
 client.once("reconnecting", () => {

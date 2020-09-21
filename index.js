@@ -15,7 +15,8 @@ const activities_list = [
   "https://bit.ly/2YHJDgP", 
   "24/7 uptime",
   "u?info", 
-  "u?help"
+  "u?help",
+  "u?invite"
   ];
 
 client.on('ready', () => {

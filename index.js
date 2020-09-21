@@ -57,7 +57,7 @@ client.on("message", async message => {
         description: "",
         fields: [{
             name: "PARANCSOK:",
-            value: "u?play [YouTube URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése\nu?info - érdekes információk a botról"
+            value: "u?play [YouTube URL] - Zene indítása YouTube-ról\nu?skip - Zene átugrása\nu?stop - Zene leállítása\nu?help - Segítség kérése\nu?info - érdekes információk a botról\nu?news - A bot újdonságai\nu?invite - Bot meghívójának lekérése"
           },
           {
             name: "SUPPORT SZERVER:",
@@ -101,8 +101,8 @@ client.on("message", async message => {
             value: "JavaScript, Node.js"
           },
           {
-            name: "futtatva:",
-            value: "Heroku"
+            name: "aktív:",
+            value: "2020.08.30 óta"
           }
         ]
       }
@@ -113,6 +113,14 @@ client.on("message", async message => {
         color: 0x42F572,
         title: "MEGHÍVÓ LINKEM:",
         description: "https://bit.ly/2YHJDgP"
+      }
+    })
+  } else if (messasge.content === 'u?news') {
+    message.channel.send({
+      embed: {
+        color: 0x42F572,
+        title: "ÚJDONSÁGOK:",
+        description: "- Mostantól sokkal több információ tekinthető meg a változó állapoton\n- Bekerült az **u?news** parancs, ahol megtekinthetőek az újdonságok\n- Bekerült a **u?invite** parancs, ahol lekérhető a bot meghívója\n- Bekerült az **u?info** parancs, ahol érdekes információkat nézhetsz meg a botról"
       }
     })
   } else {

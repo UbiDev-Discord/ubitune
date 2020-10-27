@@ -13,7 +13,7 @@ const queue = new Map();
 
 const activities_list = [
   "https://bit.ly/2YHJDgP",
-  "24/7 uptime",
+  "Hívj meg! ",
   "u?help",
   "u?invite"
 ];

@@ -13,7 +13,7 @@ const queue = new Map();
 
 const activities_list = [
   "https://bit.ly/2YHJDgP",
-  "Hívj meg! ",
+  "Hívj meg!",
   "u?help",
   "u?invite"
 ];
